@@ -1,11 +1,11 @@
-import './scheduler';
+import "./scheduler";
 
-import assert from 'assert';
-import faker from 'faker';
-import Fastify from 'fastify';
-import { range } from 'lodash-es';
+import assert from "assert";
+import faker from "faker";
+import Fastify from "fastify";
+import { range } from "lodash-es";
 
-import { buildApp } from './app';
+import { buildApp } from "./app";
 
 faker.seed(2021);
 
@@ -16,7 +16,7 @@ const app = Fastify({
 app.register(
   buildApp({
     async prepare({ registerModule, gql }) {
-      await import('./services');
+      await import("./services");
       registerModule(
         gql`
           input CursorConnectionArgs {
@@ -46,17 +46,17 @@ app.register(
           resolvers: {
             Query: {
               hello() {
-                return 'Hello World';
+                return "Hello World";
               },
               namesList(_root, { n }) {
-                assert(n <= 10000, 'You can only request up to 10.000 names.');
+                assert(n <= 10000, "You can only request up to 10.000 names.");
                 faker.seed(2021);
                 return range(n).map(() => faker.name.firstName());
               },
             },
             Mutation: {
               hello() {
-                return 'Hello World';
+                return "Hello World";
               },
             },
           },
@@ -66,8 +66,8 @@ app.register(
   }).fastifyPlugin
 );
 
-app.get('/', (_req, res) => {
-  res.type('text/html').send(`
+app.get("/", (_req, res) => {
+  res.type("text/html").send(`
   <html>
     <head>
       <link rel="icon" href="https://gqless.com/icon/favicon-96x96.png" />
@@ -94,6 +94,6 @@ app.get('/', (_req, res) => {
   `);
 });
 
-app.listen(8090, '0.0.0.0', (err) => {
+app.listen(8090, "0.0.0.0", (err) => {
   if (err) console.error(err);
 });

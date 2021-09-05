@@ -1,6 +1,6 @@
-import assert from 'assert';
+import assert from "assert";
 
-import { gql, registerModule } from '../app';
+import { gql, registerModule } from "../app";
 
 registerModule(
   gql`
@@ -21,11 +21,11 @@ registerModule(
     resolvers: {
       Mutation: {
         async setName(_root, { name }, { prisma, user }) {
-          assert(user, 'You are not authenticated!');
+          assert(user, "You are not authenticated!");
           name = name.trim();
           assert(
             name.length >= 3,
-            'Name is too short, it has to be at least 3 characters'
+            "Name is too short, it has to be at least 3 characters"
           );
 
           return await prisma.user.update({

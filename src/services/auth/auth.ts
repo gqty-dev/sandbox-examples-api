@@ -1,7 +1,7 @@
-import { LazyPromise } from 'graphql-ez';
+import { LazyPromise } from "graphql-ez";
 
-import { gql, registerModule } from '../../app';
-import { SignToken } from './jwt';
+import { gql, registerModule } from "../../app";
+import { SignToken } from "./jwt";
 
 registerModule(
   gql`
@@ -57,7 +57,7 @@ registerModule(
 
           return {
             user,
-            error: user ? null : 'User not found',
+            error: user ? null : "User not found",
             token: user
               ? LazyPromise(() => SignToken(user.id, user.role))
               : null,
@@ -75,7 +75,7 @@ registerModule(
 
           if (existingUser) {
             return {
-              error: 'Email is already registered',
+              error: "Email is already registered",
             };
           }
 

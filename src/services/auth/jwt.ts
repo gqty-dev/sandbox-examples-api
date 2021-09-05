@@ -1,19 +1,19 @@
-import faker from 'faker';
-import jwt from 'jsonwebtoken';
-import { random } from 'lodash-es';
+import faker from "faker";
+import jwt from "jsonwebtoken";
+import { random } from "lodash-es";
 
-import type { Role } from '@prisma/client';
+import type { Role } from "@prisma/client";
 
 faker.seed(random(100000));
 const SECRET =
-  process.env['NODE_ENV'] === 'production'
+  process.env["NODE_ENV"] === "production"
     ? faker.random.word() +
       faker.random.word() +
       faker.random.word() +
       faker.random.word() +
       faker.random.word() +
       faker.random.word()
-    : 'VERY_SECRET_TOKEN';
+    : "VERY_SECRET_TOKEN";
 
 const { verify, sign } = jwt;
 
@@ -43,6 +43,6 @@ export function SignToken(id: number, role: Role) {
     role,
   };
   return sign(data, SECRET, {
-    expiresIn: '1 day',
+    expiresIn: "1 day",
   });
 }

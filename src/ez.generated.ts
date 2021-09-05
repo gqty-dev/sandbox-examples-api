@@ -2,8 +2,8 @@ import type {
   GraphQLResolveInfo,
   GraphQLScalarType,
   GraphQLScalarTypeConfig,
-} from 'graphql';
-import type { EZContext } from 'graphql-ez';
+} from "graphql";
+import type { EZContext } from "graphql-ez";
 export type Maybe<T> = T | null;
 export type Exact<T extends { [key: string]: unknown }> = {
   [K in keyof T]: T[K];
@@ -18,8 +18,8 @@ export type ResolverFn<TResult, TParent, TContext, TArgs> = (
   context: TContext,
   info: GraphQLResolveInfo
 ) =>
-  | Promise<import('graphql-ez').DeepPartial<TResult>>
-  | import('graphql-ez').DeepPartial<TResult>;
+  | Promise<import("graphql-ez").DeepPartial<TResult>>
+  | import("graphql-ez").DeepPartial<TResult>;
 export type RequireFields<T, K extends keyof T> = {
   [X in Exclude<keyof T, K>]?: T[X];
 } &
@@ -42,24 +42,24 @@ export type Scalars = {
 };
 
 export type LoginInput = {
-  email: Scalars['EmailAddress'];
+  email: Scalars["EmailAddress"];
 };
 
 export type RegisterInput = {
-  email: Scalars['EmailAddress'];
+  email: Scalars["EmailAddress"];
 };
 
 export type AuthResult = {
-  __typename?: 'AuthResult';
+  __typename?: "AuthResult";
   user?: Maybe<User>;
-  error?: Maybe<Scalars['String']>;
-  token?: Maybe<Scalars['String']>;
+  error?: Maybe<Scalars["String"]>;
+  token?: Maybe<Scalars["String"]>;
 };
 
 export type Category = {
-  __typename?: 'Category';
-  id: Scalars['ID'];
-  name?: Maybe<Scalars['String']>;
+  __typename?: "Category";
+  id: Scalars["ID"];
+  name?: Maybe<Scalars["String"]>;
   posts: PostsConnection;
 };
 
@@ -68,40 +68,40 @@ export type CategoryPostsArgs = {
 };
 
 export type Post = {
-  __typename?: 'Post';
-  id: Scalars['ID'];
-  createdAt: Scalars['DateTime'];
-  published: Scalars['Boolean'];
-  title: Scalars['String'];
+  __typename?: "Post";
+  id: Scalars["ID"];
+  createdAt: Scalars["DateTime"];
+  published: Scalars["Boolean"];
+  title: Scalars["String"];
   category?: Maybe<Array<Category>>;
 };
 
 export type PostCreate = {
-  title: Scalars['NonEmptyString'];
-  category?: Maybe<Array<Scalars['String']>>;
+  title: Scalars["NonEmptyString"];
+  category?: Maybe<Array<Scalars["String"]>>;
 };
 
 export type PostUpdate = {
-  id: Scalars['String'];
-  title?: Maybe<Scalars['NonEmptyString']>;
-  category?: Maybe<Array<Scalars['String']>>;
-  published?: Maybe<Scalars['Boolean']>;
+  id: Scalars["String"];
+  title?: Maybe<Scalars["NonEmptyString"]>;
+  category?: Maybe<Array<Scalars["String"]>>;
+  published?: Maybe<Scalars["Boolean"]>;
 };
 
 export type PostsConnection = {
-  __typename?: 'PostsConnection';
+  __typename?: "PostsConnection";
   nodes: Array<Post>;
   pageInfo: CursorPageInfo;
 };
 
-export type UserRole = 'USER' | 'ADMIN';
+export type UserRole = "USER" | "ADMIN";
 
 export type User = {
-  __typename?: 'User';
-  id: Scalars['ID'];
-  name?: Maybe<Scalars['String']>;
+  __typename?: "User";
+  id: Scalars["ID"];
+  name?: Maybe<Scalars["String"]>;
   role: UserRole;
-  email: Scalars['String'];
+  email: Scalars["String"];
   /** Posts created by user */
   posts: PostsConnection;
 };
@@ -111,24 +111,24 @@ export type UserPostsArgs = {
 };
 
 export type CursorConnectionArgs = {
-  first?: Maybe<Scalars['NonNegativeInt']>;
-  after?: Maybe<Scalars['NonEmptyString']>;
-  last?: Maybe<Scalars['NonNegativeInt']>;
-  before?: Maybe<Scalars['NonEmptyString']>;
+  first?: Maybe<Scalars["NonNegativeInt"]>;
+  after?: Maybe<Scalars["NonEmptyString"]>;
+  last?: Maybe<Scalars["NonNegativeInt"]>;
+  before?: Maybe<Scalars["NonEmptyString"]>;
 };
 
 export type CursorPageInfo = {
-  __typename?: 'CursorPageInfo';
-  hasNextPage: Scalars['Boolean'];
-  hasPreviousPage: Scalars['Boolean'];
-  startCursor?: Maybe<Scalars['NonEmptyString']>;
-  endCursor?: Maybe<Scalars['NonEmptyString']>;
+  __typename?: "CursorPageInfo";
+  hasNextPage: Scalars["Boolean"];
+  hasPreviousPage: Scalars["Boolean"];
+  startCursor?: Maybe<Scalars["NonEmptyString"]>;
+  endCursor?: Maybe<Scalars["NonEmptyString"]>;
 };
 
 export type Query = {
-  __typename?: 'Query';
-  hello: Scalars['String'];
-  namesList: Array<Scalars['String']>;
+  __typename?: "Query";
+  hello: Scalars["String"];
+  namesList: Array<Scalars["String"]>;
   /** Current authenticated user */
   currentUser: AuthResult;
   /** Get all published posts */
@@ -138,7 +138,7 @@ export type Query = {
 };
 
 export type QueryNamesListArgs = {
-  n?: Maybe<Scalars['Int']>;
+  n?: Maybe<Scalars["Int"]>;
 };
 
 export type QueryPublicPostsArgs = {
@@ -146,8 +146,8 @@ export type QueryPublicPostsArgs = {
 };
 
 export type Mutation = {
-  __typename?: 'Mutation';
-  hello: Scalars['String'];
+  __typename?: "Mutation";
+  hello: Scalars["String"];
   /** Login user */
   login: AuthResult;
   /** Register user */
@@ -157,7 +157,7 @@ export type Mutation = {
   /** [Authenticated] Update existing post */
   updatePost: Post;
   /** [Authenticated] Remove own post */
-  removeOwnPost: Scalars['Boolean'];
+  removeOwnPost: Scalars["Boolean"];
   setName: User;
 };
 
@@ -178,11 +178,11 @@ export type MutationUpdatePostArgs = {
 };
 
 export type MutationRemoveOwnPostArgs = {
-  postId: Scalars['String'];
+  postId: Scalars["String"];
 };
 
 export type MutationSetNameArgs = {
-  name: Scalars['String'];
+  name: Scalars["String"];
 };
 
 export type ResolverTypeWrapper<T> = Promise<T> | T;
@@ -285,18 +285,18 @@ export type DirectiveResolverFn<
 
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
-  NonNegativeInt: ResolverTypeWrapper<Scalars['NonNegativeInt']>;
-  NonEmptyString: ResolverTypeWrapper<Scalars['NonEmptyString']>;
-  DateTime: ResolverTypeWrapper<Scalars['DateTime']>;
-  EmailAddress: ResolverTypeWrapper<Scalars['EmailAddress']>;
+  NonNegativeInt: ResolverTypeWrapper<Scalars["NonNegativeInt"]>;
+  NonEmptyString: ResolverTypeWrapper<Scalars["NonEmptyString"]>;
+  DateTime: ResolverTypeWrapper<Scalars["DateTime"]>;
+  EmailAddress: ResolverTypeWrapper<Scalars["EmailAddress"]>;
   LoginInput: LoginInput;
   RegisterInput: RegisterInput;
   AuthResult: ResolverTypeWrapper<AuthResult>;
-  String: ResolverTypeWrapper<Scalars['String']>;
+  String: ResolverTypeWrapper<Scalars["String"]>;
   Category: ResolverTypeWrapper<Category>;
-  ID: ResolverTypeWrapper<Scalars['ID']>;
+  ID: ResolverTypeWrapper<Scalars["ID"]>;
   Post: ResolverTypeWrapper<Post>;
-  Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
+  Boolean: ResolverTypeWrapper<Scalars["Boolean"]>;
   PostCreate: PostCreate;
   PostUpdate: PostUpdate;
   PostsConnection: ResolverTypeWrapper<PostsConnection>;
@@ -305,24 +305,24 @@ export type ResolversTypes = {
   CursorConnectionArgs: CursorConnectionArgs;
   CursorPageInfo: ResolverTypeWrapper<CursorPageInfo>;
   Query: ResolverTypeWrapper<{}>;
-  Int: ResolverTypeWrapper<Scalars['Int']>;
+  Int: ResolverTypeWrapper<Scalars["Int"]>;
   Mutation: ResolverTypeWrapper<{}>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
-  NonNegativeInt: Scalars['NonNegativeInt'];
-  NonEmptyString: Scalars['NonEmptyString'];
-  DateTime: Scalars['DateTime'];
-  EmailAddress: Scalars['EmailAddress'];
+  NonNegativeInt: Scalars["NonNegativeInt"];
+  NonEmptyString: Scalars["NonEmptyString"];
+  DateTime: Scalars["DateTime"];
+  EmailAddress: Scalars["EmailAddress"];
   LoginInput: LoginInput;
   RegisterInput: RegisterInput;
   AuthResult: AuthResult;
-  String: Scalars['String'];
+  String: Scalars["String"];
   Category: Category;
-  ID: Scalars['ID'];
+  ID: Scalars["ID"];
   Post: Post;
-  Boolean: Scalars['Boolean'];
+  Boolean: Scalars["Boolean"];
   PostCreate: PostCreate;
   PostUpdate: PostUpdate;
   PostsConnection: PostsConnection;
@@ -330,65 +330,65 @@ export type ResolversParentTypes = {
   CursorConnectionArgs: CursorConnectionArgs;
   CursorPageInfo: CursorPageInfo;
   Query: {};
-  Int: Scalars['Int'];
+  Int: Scalars["Int"];
   Mutation: {};
 };
 
 export interface NonNegativeIntScalarConfig
-  extends GraphQLScalarTypeConfig<ResolversTypes['NonNegativeInt'], any> {
-  name: 'NonNegativeInt';
+  extends GraphQLScalarTypeConfig<ResolversTypes["NonNegativeInt"], any> {
+  name: "NonNegativeInt";
 }
 
 export interface NonEmptyStringScalarConfig
-  extends GraphQLScalarTypeConfig<ResolversTypes['NonEmptyString'], any> {
-  name: 'NonEmptyString';
+  extends GraphQLScalarTypeConfig<ResolversTypes["NonEmptyString"], any> {
+  name: "NonEmptyString";
 }
 
 export interface DateTimeScalarConfig
-  extends GraphQLScalarTypeConfig<ResolversTypes['DateTime'], any> {
-  name: 'DateTime';
+  extends GraphQLScalarTypeConfig<ResolversTypes["DateTime"], any> {
+  name: "DateTime";
 }
 
 export interface EmailAddressScalarConfig
-  extends GraphQLScalarTypeConfig<ResolversTypes['EmailAddress'], any> {
-  name: 'EmailAddress';
+  extends GraphQLScalarTypeConfig<ResolversTypes["EmailAddress"], any> {
+  name: "EmailAddress";
 }
 
 export type AuthResultResolvers<
   ContextType = EZContext,
-  ParentType extends ResolversParentTypes['AuthResult'] = ResolversParentTypes['AuthResult']
+  ParentType extends ResolversParentTypes["AuthResult"] = ResolversParentTypes["AuthResult"]
 > = {
-  user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  token?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  user?: Resolver<Maybe<ResolversTypes["User"]>, ParentType, ContextType>;
+  error?: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
+  token?: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type CategoryResolvers<
   ContextType = EZContext,
-  ParentType extends ResolversParentTypes['Category'] = ResolversParentTypes['Category']
+  ParentType extends ResolversParentTypes["Category"] = ResolversParentTypes["Category"]
 > = {
-  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
-  name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes["ID"], ParentType, ContextType>;
+  name?: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
   posts?: Resolver<
-    ResolversTypes['PostsConnection'],
+    ResolversTypes["PostsConnection"],
     ParentType,
     ContextType,
-    RequireFields<CategoryPostsArgs, 'input'>
+    RequireFields<CategoryPostsArgs, "input">
   >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type PostResolvers<
   ContextType = EZContext,
-  ParentType extends ResolversParentTypes['Post'] = ResolversParentTypes['Post']
+  ParentType extends ResolversParentTypes["Post"] = ResolversParentTypes["Post"]
 > = {
-  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
-  createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>;
-  published?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
-  title?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  id?: Resolver<ResolversTypes["ID"], ParentType, ContextType>;
+  createdAt?: Resolver<ResolversTypes["DateTime"], ParentType, ContextType>;
+  published?: Resolver<ResolversTypes["Boolean"], ParentType, ContextType>;
+  title?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   category?: Resolver<
-    Maybe<Array<ResolversTypes['Category']>>,
+    Maybe<Array<ResolversTypes["Category"]>>,
     ParentType,
     ContextType
   >;
@@ -397,11 +397,11 @@ export type PostResolvers<
 
 export type PostsConnectionResolvers<
   ContextType = EZContext,
-  ParentType extends ResolversParentTypes['PostsConnection'] = ResolversParentTypes['PostsConnection']
+  ParentType extends ResolversParentTypes["PostsConnection"] = ResolversParentTypes["PostsConnection"]
 > = {
-  nodes?: Resolver<Array<ResolversTypes['Post']>, ParentType, ContextType>;
+  nodes?: Resolver<Array<ResolversTypes["Post"]>, ParentType, ContextType>;
   pageInfo?: Resolver<
-    ResolversTypes['CursorPageInfo'],
+    ResolversTypes["CursorPageInfo"],
     ParentType,
     ContextType
   >;
@@ -410,38 +410,38 @@ export type PostsConnectionResolvers<
 
 export type UserResolvers<
   ContextType = EZContext,
-  ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']
+  ParentType extends ResolversParentTypes["User"] = ResolversParentTypes["User"]
 > = {
-  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
-  name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  role?: Resolver<ResolversTypes['UserRole'], ParentType, ContextType>;
-  email?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  id?: Resolver<ResolversTypes["ID"], ParentType, ContextType>;
+  name?: Resolver<Maybe<ResolversTypes["String"]>, ParentType, ContextType>;
+  role?: Resolver<ResolversTypes["UserRole"], ParentType, ContextType>;
+  email?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   posts?: Resolver<
-    ResolversTypes['PostsConnection'],
+    ResolversTypes["PostsConnection"],
     ParentType,
     ContextType,
-    RequireFields<UserPostsArgs, 'input'>
+    RequireFields<UserPostsArgs, "input">
   >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type CursorPageInfoResolvers<
   ContextType = EZContext,
-  ParentType extends ResolversParentTypes['CursorPageInfo'] = ResolversParentTypes['CursorPageInfo']
+  ParentType extends ResolversParentTypes["CursorPageInfo"] = ResolversParentTypes["CursorPageInfo"]
 > = {
-  hasNextPage?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
+  hasNextPage?: Resolver<ResolversTypes["Boolean"], ParentType, ContextType>;
   hasPreviousPage?: Resolver<
-    ResolversTypes['Boolean'],
+    ResolversTypes["Boolean"],
     ParentType,
     ContextType
   >;
   startCursor?: Resolver<
-    Maybe<ResolversTypes['NonEmptyString']>,
+    Maybe<ResolversTypes["NonEmptyString"]>,
     ParentType,
     ContextType
   >;
   endCursor?: Resolver<
-    Maybe<ResolversTypes['NonEmptyString']>,
+    Maybe<ResolversTypes["NonEmptyString"]>,
     ParentType,
     ContextType
   >;
@@ -450,24 +450,24 @@ export type CursorPageInfoResolvers<
 
 export type QueryResolvers<
   ContextType = EZContext,
-  ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']
+  ParentType extends ResolversParentTypes["Query"] = ResolversParentTypes["Query"]
 > = {
-  hello?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  hello?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   namesList?: Resolver<
-    Array<ResolversTypes['String']>,
+    Array<ResolversTypes["String"]>,
     ParentType,
     ContextType,
-    RequireFields<QueryNamesListArgs, 'n'>
+    RequireFields<QueryNamesListArgs, "n">
   >;
-  currentUser?: Resolver<ResolversTypes['AuthResult'], ParentType, ContextType>;
+  currentUser?: Resolver<ResolversTypes["AuthResult"], ParentType, ContextType>;
   publicPosts?: Resolver<
-    ResolversTypes['PostsConnection'],
+    ResolversTypes["PostsConnection"],
     ParentType,
     ContextType,
-    RequireFields<QueryPublicPostsArgs, 'input'>
+    RequireFields<QueryPublicPostsArgs, "input">
   >;
   postsCategories?: Resolver<
-    Array<ResolversTypes['Category']>,
+    Array<ResolversTypes["Category"]>,
     ParentType,
     ContextType
   >;
@@ -475,44 +475,44 @@ export type QueryResolvers<
 
 export type MutationResolvers<
   ContextType = EZContext,
-  ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']
+  ParentType extends ResolversParentTypes["Mutation"] = ResolversParentTypes["Mutation"]
 > = {
-  hello?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  hello?: Resolver<ResolversTypes["String"], ParentType, ContextType>;
   login?: Resolver<
-    ResolversTypes['AuthResult'],
+    ResolversTypes["AuthResult"],
     ParentType,
     ContextType,
-    RequireFields<MutationLoginArgs, 'input'>
+    RequireFields<MutationLoginArgs, "input">
   >;
   register?: Resolver<
-    ResolversTypes['AuthResult'],
+    ResolversTypes["AuthResult"],
     ParentType,
     ContextType,
-    RequireFields<MutationRegisterArgs, 'input'>
+    RequireFields<MutationRegisterArgs, "input">
   >;
   createPost?: Resolver<
-    ResolversTypes['Post'],
+    ResolversTypes["Post"],
     ParentType,
     ContextType,
-    RequireFields<MutationCreatePostArgs, 'post'>
+    RequireFields<MutationCreatePostArgs, "post">
   >;
   updatePost?: Resolver<
-    ResolversTypes['Post'],
+    ResolversTypes["Post"],
     ParentType,
     ContextType,
-    RequireFields<MutationUpdatePostArgs, 'post'>
+    RequireFields<MutationUpdatePostArgs, "post">
   >;
   removeOwnPost?: Resolver<
-    ResolversTypes['Boolean'],
+    ResolversTypes["Boolean"],
     ParentType,
     ContextType,
-    RequireFields<MutationRemoveOwnPostArgs, 'postId'>
+    RequireFields<MutationRemoveOwnPostArgs, "postId">
   >;
   setName?: Resolver<
-    ResolversTypes['User'],
+    ResolversTypes["User"],
     ParentType,
     ContextType,
-    RequireFields<MutationSetNameArgs, 'name'>
+    RequireFields<MutationSetNameArgs, "name">
   >;
 };
 
@@ -531,6 +531,6 @@ export type Resolvers<ContextType = EZContext> = {
   Mutation?: MutationResolvers<ContextType>;
 };
 
-declare module 'graphql-ez' {
-  interface EZResolvers extends Resolvers<import('graphql-ez').EZContext> {}
+declare module "graphql-ez" {
+  interface EZResolvers extends Resolvers<import("graphql-ez").EZContext> {}
 }

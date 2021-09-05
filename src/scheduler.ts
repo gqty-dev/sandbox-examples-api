@@ -1,6 +1,6 @@
-import schedule from 'node-schedule';
+import schedule from "node-schedule";
 
-import { prisma } from './db';
+import { prisma } from "./db";
 
 const wipe = async () => {
   try {
@@ -10,11 +10,11 @@ const wipe = async () => {
       prisma.category.deleteMany(),
       prisma.profile.deleteMany(),
     ]);
-    console.log('Database wipe complete!', new Date().toISOString());
+    console.log("Database wipe complete!", new Date().toISOString());
   } catch (err) {
-    console.error('Error while trying to wipe:');
+    console.error("Error while trying to wipe:");
     console.error(err);
   }
 };
 
-schedule.scheduleJob('0 0 * * *', wipe);
+schedule.scheduleJob("0 0 * * *", wipe);

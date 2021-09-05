@@ -1,9 +1,9 @@
-import assert from 'assert';
+import assert from "assert";
 
-import { gql, registerModule } from '../app';
-import { toInteger } from '../utils/casters';
+import { gql, registerModule } from "../app";
+import { toInteger } from "../utils/casters";
 
-import type { CursorConnectionArgs, CursorPageInfo } from '../ez.generated';
+import type { CursorConnectionArgs, CursorPageInfo } from "../ez.generated";
 async function ResolveCursorConnection<T extends { id: number | string }>(
   input: CursorConnectionArgs,
   cb: (connectionArgs: {
@@ -52,7 +52,7 @@ async function ResolveCursorConnection<T extends { id: number | string }>(
 
   const originalLength = take++;
 
-  assert(originalLength <= 50, 'You can only take up to 50 nodes');
+  assert(originalLength <= 50, "You can only take up to 50 nodes");
 
   let hasExtraNode = false;
 
@@ -161,7 +161,7 @@ registerModule(
                 },
               },
               orderBy: {
-                id: 'desc',
+                id: "desc",
               },
             });
           });
@@ -169,7 +169,7 @@ registerModule(
       },
       Mutation: {
         async removeOwnPost(_root, { postId }, { prisma, user }) {
-          assert(user, 'You have to be authenticated');
+          assert(user, "You have to be authenticated");
 
           const post = await prisma.post.findUnique({
             where: {
@@ -196,7 +196,7 @@ registerModule(
           return false;
         },
         async updatePost(_root, { post }, { user, prisma }) {
-          assert(user, 'You have to be authenticated!');
+          assert(user, "You have to be authenticated!");
 
           const { count } = await prisma.post.updateMany({
             data: {
@@ -211,7 +211,7 @@ registerModule(
             },
           });
 
-          assert(count === 1, 'Post could not be found');
+          assert(count === 1, "Post could not be found");
 
           if (post.category) {
             return await prisma.post.update({
@@ -242,7 +242,7 @@ registerModule(
           });
         },
         createPost(_root, { post }, { user, prisma }) {
-          assert(user, 'You have to be authenticated!');
+          assert(user, "You have to be authenticated!");
 
           return prisma.post.create({
             data: {
@@ -293,7 +293,7 @@ registerModule(
               .Post({
                 ...connection,
                 orderBy: {
-                  id: 'desc',
+                  id: "desc",
                 },
               });
           });
@@ -311,7 +311,7 @@ registerModule(
               .Post({
                 ...connection,
                 orderBy: {
-                  id: 'desc',
+                  id: "desc",
                 },
               });
           });
