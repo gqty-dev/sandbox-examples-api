@@ -6,21 +6,25 @@ RUN npm install -g pnpm
 
 WORKDIR /home/gqty
 
+COPY pnpm-lock.yaml /home/gqty/
+
+RUN pnpm fetch
+
 COPY package.json /home/gqty/
 
 RUN pnpm i
 
 COPY prisma /home/gqty/prisma
 
-RUN pnpm exec prisma generate
+RUN pnpm prisma generate
 
 COPY src /home/gqty/src
 
-RUN pnpm exec tsup
+RUN pnpm prepare
 
 COPY tsconfig.json /home/gqty/
 
-RUN pnpm exec tsc
+RUN pnpm typecheck
 
 ENV NODE_ENV=production
 
