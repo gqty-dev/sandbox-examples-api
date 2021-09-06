@@ -15,7 +15,7 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "prepare": "prisma generate",
+    "prepare": "prisma generate && bob-ts",
     "build": "bob-ts",
     "db:prepare": "prisma generate",
     "dev": "bob-ts-watch -c \"node dist/index.js\"",
