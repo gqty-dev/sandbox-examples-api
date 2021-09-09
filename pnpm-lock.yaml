@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@graphql-ez/fastify': ^0.9.3
+  '@graphql-ez/fastify': ^0.9.4
   '@graphql-ez/plugin-altair': ^0.7.1
   '@graphql-ez/plugin-codegen': ^0.7.2
   '@graphql-ez/plugin-modules': ^0.8.1
@@ -37,7 +37,7 @@ specifiers:
   typescript: ^4.4.2
 
 dependencies:
-  '@graphql-ez/fastify': 0.9.3_938cad229d74bba4dae15e7a9a339ab4
+  '@graphql-ez/fastify': 0.9.4_938cad229d74bba4dae15e7a9a339ab4
   '@graphql-ez/plugin-altair': 0.7.1_37ae0dc5a472d46afbbf0110e56b5e93
   '@graphql-ez/plugin-codegen': 0.7.2_37ae0dc5a472d46afbbf0110e56b5e93
   '@graphql-ez/plugin-modules': 0.8.1_37ae0dc5a472d46afbbf0110e56b5e93
@@ -798,14 +798,14 @@ packages:
       - supports-color
     dev: false
 
-  /@graphql-ez/fastify/0.9.3_938cad229d74bba4dae15e7a9a339ab4:
-    resolution: {integrity: sha512-ol3Iol69Sih6Hbry6relnK+KNyxYSYX6UX/2c2eYQ1qF9iQ12HrBmpCk7e0akC+p2QY7c27oxi3nixPTlYthvg==}
+  /@graphql-ez/fastify/0.9.4_938cad229d74bba4dae15e7a9a339ab4:
+    resolution: {integrity: sha512-O04UxbJSU+4ZLOgxxuY5ib68FJXtzXJN3O067omZRw/s5A271ELY1wcLXtNsrZC2bNIye2Gl7lIsgdUDjHMQxQ==}
     engines: {node: ^12.20.0 || >=14.13.0}
     peerDependencies:
       '@types/node': '*'
-      fastify: ^3.17.0
+      fastify: ^3.21.0
       graphql: '*'
-      graphql-ez: ^0.12.3
+      graphql-ez: ^0.13.0
     dependencies:
       '@graphql-ez/utils': 0.1.2_b217e939e9b0d1017b9ede9ab1ccbd94
       '@types/node': 16.7.10
