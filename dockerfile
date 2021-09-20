@@ -2,11 +2,11 @@ FROM quay.io/bitnami/node:14
 
 EXPOSE 8090
 
-RUN npm install -g pnpm
-
 WORKDIR /home/gqty
 
 COPY pnpm-lock.yaml /home/gqty/
+
+RUN npm install -g pnpm
 
 RUN pnpm fetch
 
