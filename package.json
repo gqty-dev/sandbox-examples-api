@@ -44,7 +44,7 @@
     "jsonwebtoken": "^8.5.1",
     "lodash-es": "^4.17.21",
     "ms": "^3.0.0-canary.1",
-    "node-json-db": "^1.4.0",
+    "node-json-db": "^1.4.1",
     "node-schedule": "^2.0.0",
     "p-lazy": "^4.0.0",
     "prisma": "^3.0.2"
