@@ -9,7 +9,7 @@ specifiers:
   '@graphql-ez/plugin-voyager': ^0.9.0
   '@graphql-ez/plugin-websockets': ^0.10.0
   '@prisma/client': ^3.0.2
-  '@types/faker': ^5.5.8
+  '@types/faker': ^5.5.9
   '@types/jsonwebtoken': ^8.5.5
   '@types/lodash': ^4.14.173
   '@types/lodash-es': ^4.17.5
@@ -63,7 +63,7 @@ dependencies:
   prisma: 3.0.2
 
 devDependencies:
-  '@types/faker': 5.5.8
+  '@types/faker': 5.5.9
   '@types/jsonwebtoken': 8.5.5
   '@types/lodash': 4.14.173
   '@types/lodash-es': 4.17.5
@@ -1210,8 +1210,8 @@ packages:
       picomatch: 2.3.0
     dev: true
 
-  /@types/faker/5.5.8:
-    resolution: {integrity: sha512-bsl0rYsaZVHlZkynL5O04q6YXDmVjcid6MbOHWqvtE2WWs/EKhp0qchDDhVWlWyQXUffX1G83X9LnMxRl8S/Mw==}
+  /@types/faker/5.5.9:
+    resolution: {integrity: sha512-uCx6mP3UY5SIO14XlspxsGjgaemrxpssJI0Ol+GfhxtcKpv9pgRZYsS4eeKeHVLje6Qtc8lGszuBI461+gVZBA==}
     dev: true
 
   /@types/glob/7.1.4:
