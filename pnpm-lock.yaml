@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@graphql-ez/fastify': ^0.9.4
-  '@graphql-ez/plugin-altair': ^0.9.1
+  '@graphql-ez/plugin-altair': ^0.9.4
   '@graphql-ez/plugin-codegen': ^0.7.3
   '@graphql-ez/plugin-modules': ^0.8.2
   '@graphql-ez/plugin-scalars': ^0.7.3
@@ -38,7 +38,7 @@ specifiers:
 
 dependencies:
   '@graphql-ez/fastify': 0.9.4_b81662b37ea63e7219695e1e208f978a
-  '@graphql-ez/plugin-altair': 0.9.1_f83c9a3125250813f8462c8c3ff7cbd4
+  '@graphql-ez/plugin-altair': 0.9.4_f83c9a3125250813f8462c8c3ff7cbd4
   '@graphql-ez/plugin-codegen': 0.7.3_f83c9a3125250813f8462c8c3ff7cbd4
   '@graphql-ez/plugin-modules': 0.8.2_f83c9a3125250813f8462c8c3ff7cbd4
   '@graphql-ez/plugin-scalars': 0.7.3_f83c9a3125250813f8462c8c3ff7cbd4
@@ -815,8 +815,8 @@ packages:
       graphql-ez: 0.13.1_f16b800cb23408b1e9aa3bb3c814fa45
     dev: false
 
-  /@graphql-ez/plugin-altair/0.9.1_f83c9a3125250813f8462c8c3ff7cbd4:
-    resolution: {integrity: sha512-B+eUbe6UtUecu/zqtO9mztcBz4qlSQEyzGu4Pu5SQOM1VOwu1RQdYKivn8DV/rN9OcfUjRB2bDQCX1pgZhu6Bw==}
+  /@graphql-ez/plugin-altair/0.9.4_f83c9a3125250813f8462c8c3ff7cbd4:
+    resolution: {integrity: sha512-73M5mWzNrWDq4mmW0jMOnf4SZXcwXheAq36pJl09KHuZmcfAkQh/HogH+W8KJ4a/FCtnbesVqvLY09eG30P1Tw==}
     engines: {node: ^12.20.0 || >=14.13.0}
     peerDependencies:
       '@types/node': '*'
@@ -824,10 +824,10 @@ packages:
     dependencies:
       '@graphql-ez/utils': 0.1.2_f16b800cb23408b1e9aa3bb3c814fa45
       '@types/node': 16.9.4
-      altair-static-slim: 4.0.9
+      altair-static-slim: 4.1.1
       cross-fetch: 3.1.4
       graphql-ez: 0.13.1_f16b800cb23408b1e9aa3bb3c814fa45
-      mime-types: 2.1.32
+      mime-types: 2.1.33
     transitivePeerDependencies:
       - graphql
     dev: false
@@ -1319,8 +1319,8 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /altair-static-slim/4.0.9:
-    resolution: {integrity: sha512-7+zgIvUF2C9FCcBWLjOO5CeJU++7oNGLxPFLadguesfrPh3jLQ/T5Cbwrjt4RGM5gA0kp7fjV4W7pc+qZVkkKw==}
+  /altair-static-slim/4.1.1:
+    resolution: {integrity: sha512-ef8xu+ka+zQDQfo2BXrbxGE+nwp/plcymI+uFWWe3hjpwti5pZs68AsIAojX/V8jslzPNaZZfFWXyHJFrX4m5A==}
     dev: false
 
   /ansi-regex/5.0.1:
@@ -2690,16 +2690,16 @@ packages:
       braces: 3.0.2
       picomatch: 2.3.0
 
-  /mime-db/1.49.0:
-    resolution: {integrity: sha512-CIc8j9URtOVApSFCQIF+VBkX1RwXp/oMMOrqdyXSBXq5RWNEsRfyj1kiRnQgmNXmHxPoFIxOroKA3zcU9P+nAA==}
+  /mime-db/1.50.0:
+    resolution: {integrity: sha512-9tMZCDlYHqeERXEHO9f/hKfNXhre5dK2eE/krIvUjZbS2KPcqGDfNShIWS1uW9XOTKQKqK6qbeOci18rbfW77A==}
     engines: {node: '>= 0.6'}
     dev: false
 
-  /mime-types/2.1.32:
-    resolution: {integrity: sha512-hJGaVS4G4c9TSMYh2n6SQAGrC4RnfU+daP8G7cSCmaqNjiOoUY0VHCMS42pxnQmVF1GWwFhbHWn3RIxCqTmZ9A==}
+  /mime-types/2.1.33:
+    resolution: {integrity: sha512-plLElXp7pRDd0bNZHw+nMd52vRYjLwQjygaNg7ddJ2uJtTlmnTCjWuPKxVu6//AdaRuME84SvLW91sIkBqGT0g==}
     engines: {node: '>= 0.6'}
     dependencies:
-      mime-db: 1.49.0
+      mime-db: 1.50.0
     dev: false
 
   /mimic-fn/2.1.0:

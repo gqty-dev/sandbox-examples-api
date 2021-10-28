@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@graphql-ez/fastify": "^0.9.4",
-    "@graphql-ez/plugin-altair": "^0.9.1",
+    "@graphql-ez/plugin-altair": "^0.9.4",
     "@graphql-ez/plugin-codegen": "^0.7.3",
     "@graphql-ez/plugin-modules": "^0.8.2",
     "@graphql-ez/plugin-scalars": "^0.7.3",
