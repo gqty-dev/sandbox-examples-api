@@ -21,7 +21,7 @@ specifiers:
   dotenv: ^10.0.0
   esbuild: ^0.12.28
   faker: ^5.5.3
-  fastify: ^3.21.3
+  fastify: ^3.24.0
   fastify-cors: ^6.0.2
   graphql: ^15.6.0
   graphql-ez: ^0.13.1
@@ -37,7 +37,7 @@ specifiers:
   typescript: ^4.4.3
 
 dependencies:
-  '@graphql-ez/fastify': 0.9.4_b81662b37ea63e7219695e1e208f978a
+  '@graphql-ez/fastify': 0.9.4_be743ef90c46d4f0da897c88077e28c2
   '@graphql-ez/plugin-altair': 0.9.1_f83c9a3125250813f8462c8c3ff7cbd4
   '@graphql-ez/plugin-codegen': 0.7.3_f83c9a3125250813f8462c8c3ff7cbd4
   '@graphql-ez/plugin-modules': 0.8.2_f83c9a3125250813f8462c8c3ff7cbd4
@@ -48,7 +48,7 @@ dependencies:
   date-fns: 2.24.0
   dotenv: 10.0.0
   faker: 5.5.3
-  fastify: 3.21.3
+  fastify: 3.24.0
   fastify-cors: 6.0.2
   graphql: 15.6.0
   graphql-ez: 0.13.1_f16b800cb23408b1e9aa3bb3c814fa45
@@ -798,7 +798,7 @@ packages:
       - supports-color
     dev: false
 
-  /@graphql-ez/fastify/0.9.4_b81662b37ea63e7219695e1e208f978a:
+  /@graphql-ez/fastify/0.9.4_be743ef90c46d4f0da897c88077e28c2:
     resolution: {integrity: sha512-O04UxbJSU+4ZLOgxxuY5ib68FJXtzXJN3O067omZRw/s5A271ELY1wcLXtNsrZC2bNIye2Gl7lIsgdUDjHMQxQ==}
     engines: {node: ^12.20.0 || >=14.13.0}
     peerDependencies:
@@ -809,7 +809,7 @@ packages:
     dependencies:
       '@graphql-ez/utils': 0.1.2_f16b800cb23408b1e9aa3bb3c814fa45
       '@types/node': 16.9.4
-      fastify: 3.21.3
+      fastify: 3.24.0
       fastify-cors: 6.0.2
       graphql: 15.6.0
       graphql-ez: 0.13.1_f16b800cb23408b1e9aa3bb3c814fa45
@@ -1944,8 +1944,8 @@ packages:
     resolution: {integrity: sha512-s1EQguBw/9qtc1p/WTY4eq9WMRIACkj+HTcOIK1in4MV5aFaQC9ZCIt0dJ7pr5bIf4lPpHvAtP2ywpTNgs7hqw==}
     dev: false
 
-  /fastify/3.21.3:
-    resolution: {integrity: sha512-4PuuCCcGZpcD9ERc8x6H7GHElcHQxHVouyANAVw/Nd9h07X63QQJ2EpHeQtuiDCjcs0pf9wKb6KIul3qCYh+1g==}
+  /fastify/3.24.0:
+    resolution: {integrity: sha512-fmRyrI25rzLGHDQ1FME02NsbP658mVa0EaSqfYUFwx2UOF+4/GcyNrsdWILSDOEiUbOsRYCD3sRCE9v7mvRLRQ==}
     dependencies:
       '@fastify/ajv-compiler': 1.1.0
       abstract-logging: 2.0.1
@@ -1958,7 +1958,6 @@ packages:
       light-my-request: 4.4.4
       pino: 6.13.2
       proxy-addr: 2.0.7
-      readable-stream: 3.6.0
       rfdc: 1.3.0
       secure-json-parse: 2.4.0
       semver: 7.3.5
