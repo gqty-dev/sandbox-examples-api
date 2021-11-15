@@ -52,7 +52,7 @@
   "devDependencies": {
     "@types/faker": "^5.5.8",
     "@types/jsonwebtoken": "^8.5.5",
-    "@types/lodash": "^4.14.173",
+    "@types/lodash": "^4.14.177",
     "@types/lodash-es": "^4.17.5",
     "@types/ms": "^0.7.31",
     "@types/node": "^16.9.4",
