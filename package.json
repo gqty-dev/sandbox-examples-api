@@ -31,7 +31,7 @@
     "@graphql-ez/plugin-scalars": "^0.7.3",
     "@graphql-ez/plugin-voyager": "^0.9.0",
     "@graphql-ez/plugin-websockets": "^0.10.0",
-    "@prisma/client": "^3.0.2",
+    "@prisma/client": "^3.5.0",
     "date-fns": "^2.24.0",
     "dotenv": "^10.0.0",
     "faker": "^5.5.3",
@@ -47,7 +47,7 @@
     "node-json-db": "^1.4.0",
     "node-schedule": "^2.0.0",
     "p-lazy": "^4.0.0",
-    "prisma": "^3.0.2"
+    "prisma": "^3.5.0"
   },
   "devDependencies": {
     "@types/faker": "^5.5.8",
