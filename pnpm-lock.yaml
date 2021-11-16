@@ -25,7 +25,7 @@ specifiers:
   fastify-cors: ^6.0.2
   graphql: ^15.6.0
   graphql-ez: ^0.13.1
-  graphql-scalars: ^1.10.1
+  graphql-scalars: ^1.13.6
   graphql-voyager: ^1.0.0-rc.31
   jsonwebtoken: ^8.5.1
   lodash-es: ^4.17.21
@@ -52,7 +52,7 @@ dependencies:
   fastify-cors: 6.0.2
   graphql: 15.6.0
   graphql-ez: 0.13.1_f16b800cb23408b1e9aa3bb3c814fa45
-  graphql-scalars: 1.10.1_graphql@15.6.0
+  graphql-scalars: 1.13.6_graphql@15.6.0
   graphql-voyager: 1.0.0-rc.31_graphql@15.6.0
   jsonwebtoken: 8.5.1
   lodash-es: 4.17.21
@@ -886,7 +886,7 @@ packages:
       '@graphql-tools/utils': 8.2.2_graphql@15.6.0
       graphql: 15.6.0
       graphql-ez: 0.13.1_f16b800cb23408b1e9aa3bb3c814fa45
-      graphql-scalars: 1.10.1_graphql@15.6.0
+      graphql-scalars: 1.13.6_graphql@15.6.0
     transitivePeerDependencies:
       - '@types/node'
     dev: false
@@ -1516,7 +1516,7 @@ packages:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
     dependencies:
       pascal-case: 3.1.2
-      tslib: 2.2.0
+      tslib: 2.3.1
     dev: false
 
   /camelcase/5.3.1:
@@ -2174,11 +2174,11 @@ packages:
       ramda: 0.27.1
     dev: false
 
-  /graphql-scalars/1.10.1_graphql@15.6.0:
-    resolution: {integrity: sha512-/6vDkUogePfumSJaCRVrVT1vpEhvE0m36AHTPzhLC/tucWxVolOCj0EgGKVUMc0uehe93ByuRBj8rEDaPRXVxg==}
+  /graphql-scalars/1.13.6_graphql@15.6.0:
+    resolution: {integrity: sha512-jetz3kAsAC2dNkw/fMbsT0XR+sd2rOtnOuW+6v5BjLcPR2QGgvL64tNINVRrzVuGHvDRgvoAvzwE+Z68zCsi4Q==}
     engines: {node: '>=10'}
     peerDependencies:
-      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
       graphql: 15.6.0
       tslib: 2.3.1
