@@ -34,7 +34,7 @@ specifiers:
   node-schedule: ^2.0.0
   p-lazy: ^4.0.0
   prisma: ^3.0.2
-  typescript: ^4.4.3
+  typescript: ^4.5.2
 
 dependencies:
   '@graphql-ez/fastify': 0.9.4_b81662b37ea63e7219695e1e208f978a
@@ -72,7 +72,7 @@ devDependencies:
   '@types/node-schedule': 1.3.2
   bob-ts: 1.1.0_4d3b33ac22ff8a9cd67893474fb4da8f
   esbuild: 0.12.28
-  typescript: 4.4.3
+  typescript: 4.5.2
 
 packages:
 
@@ -3416,8 +3416,8 @@ packages:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
     dev: false
 
-  /typescript/4.4.3:
-    resolution: {integrity: sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==}
+  /typescript/4.5.2:
+    resolution: {integrity: sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
