@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 import "./scheduler";
 
 import assert from "assert";

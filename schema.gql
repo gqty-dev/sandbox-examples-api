@@ -23,6 +23,15 @@ A field whose value conforms to the standard internet email address format as sp
 """
 scalar EmailAddress @specifiedBy(url: "https://www.w3.org/Protocols/rfc822/")
 
+type User {
+  email: String!
+  "Posts created by user"
+  posts(input: CursorConnectionArgs!): PostsConnection!
+  id: ID!
+  name: String
+  role: UserRole!
+}
+
 input LoginInput {
   email: EmailAddress!
 }
@@ -35,6 +44,32 @@ type AuthResult {
   user: User
   error: String
   token: String
+}
+
+type Query {
+  "Current authenticated user"
+  currentUser: AuthResult!
+  "Get all published posts"
+  publicPosts(input: CursorConnectionArgs!): PostsConnection!
+  "Get all current created categories"
+  postsCategories: [Category!]!
+  hello: String!
+  namesList(n: Int = 10): [String!]!
+}
+
+type Mutation {
+  "Login user"
+  login(input: LoginInput!): AuthResult!
+  "Register user"
+  register(input: RegisterInput!): AuthResult!
+  "[Authenticated] Create new post"
+  createPost(post: PostCreate!): Post!
+  "[Authenticated] Update existing post"
+  updatePost(post: PostUpdate!): Post!
+  "[Authenticated] Remove own post"
+  removeOwnPost(postId: String!): Boolean!
+  setName(name: String!): User!
+  hello: String!
 }
 
 type Category {
@@ -73,15 +108,6 @@ enum UserRole {
   ADMIN
 }
 
-type User {
-  id: ID!
-  name: String
-  role: UserRole!
-  email: String!
-  "Posts created by user"
-  posts(input: CursorConnectionArgs!): PostsConnection!
-}
-
 input CursorConnectionArgs {
   first: NonNegativeInt
   after: NonEmptyString
@@ -94,30 +120,4 @@ type CursorPageInfo {
   hasPreviousPage: Boolean!
   startCursor: NonEmptyString
   endCursor: NonEmptyString
-}
-
-type Query {
-  hello: String!
-  namesList(n: Int = 10): [String!]!
-  "Current authenticated user"
-  currentUser: AuthResult!
-  "Get all published posts"
-  publicPosts(input: CursorConnectionArgs!): PostsConnection!
-  "Get all current created categories"
-  postsCategories: [Category!]!
-}
-
-type Mutation {
-  hello: String!
-  "Login user"
-  login(input: LoginInput!): AuthResult!
-  "Register user"
-  register(input: RegisterInput!): AuthResult!
-  "[Authenticated] Create new post"
-  createPost(post: PostCreate!): Post!
-  "[Authenticated] Update existing post"
-  updatePost(post: PostUpdate!): Post!
-  "[Authenticated] Remove own post"
-  removeOwnPost(postId: String!): Boolean!
-  setName(name: String!): User!
 }

@@ -1,4 +1,4 @@
-FROM quay.io/bitnami/node:14
+FROM quay.io/bitnami/node:16-prod
 
 EXPOSE 8090
 
@@ -16,16 +16,12 @@ RUN pnpm i
 
 COPY prisma /home/gqty/prisma
 
-RUN pnpm prisma generate
+RUN pnpm prepare
 
 COPY src /home/gqty/src
-
-RUN pnpm prepare
 
 COPY tsconfig.json /home/gqty/
 
 RUN pnpm typecheck
 
-ENV NODE_ENV=production
-
-CMD node ./dist/index.js
+CMD ["pnpm", "start"]
