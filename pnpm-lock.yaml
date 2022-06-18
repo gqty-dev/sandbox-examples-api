@@ -6,7 +6,7 @@ specifiers:
   '@graphql-ez/plugin-codegen': ^0.7.7
   '@graphql-ez/plugin-modules': ^0.10.0
   '@graphql-ez/plugin-scalars': ^0.7.3
-  '@graphql-ez/plugin-voyager': ^0.9.1
+  '@graphql-ez/plugin-voyager': ^0.9.4
   '@graphql-ez/plugin-websockets': ^0.10.2
   '@prisma/client': ^3.7.0
   '@types/faker': ^5.5.9
@@ -39,7 +39,7 @@ dependencies:
   '@graphql-ez/plugin-codegen': 0.7.7_302f8346b359e706fa2945fd5f600d0d
   '@graphql-ez/plugin-modules': 0.10.0_302f8346b359e706fa2945fd5f600d0d
   '@graphql-ez/plugin-scalars': 0.7.3_302f8346b359e706fa2945fd5f600d0d
-  '@graphql-ez/plugin-voyager': 0.9.1_302f8346b359e706fa2945fd5f600d0d
+  '@graphql-ez/plugin-voyager': 0.9.4_302f8346b359e706fa2945fd5f600d0d
   '@graphql-ez/plugin-websockets': 0.10.2_302f8346b359e706fa2945fd5f600d0d
   '@prisma/client': 3.7.0_prisma@3.7.0
   date-fns: 2.28.0
@@ -292,6 +292,8 @@ packages:
     resolution: {integrity: sha512-sR4eaSrnM7BV7QPzGfEX5paG/6wrZM3I0HDzfIAK06ESvo9oy3xBuVBxE3MbQaKNhvg8g/ixjMWo2CGpzpHsDA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.16.7
     dev: false
 
   /@babel/plugin-proposal-class-properties/7.16.7_@babel+core@7.16.7:
@@ -873,13 +875,13 @@ packages:
       - '@types/node'
     dev: false
 
-  /@graphql-ez/plugin-voyager/0.9.1_302f8346b359e706fa2945fd5f600d0d:
-    resolution: {integrity: sha512-jTAYhxC61JBdWjMgffHEOXiL6SpcHBd6+dubFPxym+hJhF75ng4FZjhmRfCZtM+2ASJhz/UVT7PoA+umFZB8TA==}
-    engines: {node: ^12.20.0 || >=14.13.0}
+  /@graphql-ez/plugin-voyager/0.9.4_302f8346b359e706fa2945fd5f600d0d:
+    resolution: {integrity: sha512-NiKqxppygcQHx/Wu1LpikdZQBtrCvh1jkgNUDbyqrBA6fvDtrORTY9VLlRu2kZQzuCK9xZNR7OUTijBscPvwng==}
+    engines: {node: '>=14.13.1'}
     peerDependencies:
-      graphql-ez: ^0.13.0
+      graphql-ez: ^0.15.0
     dependencies:
-      '@graphql-ez/utils': 0.1.2_794d6c9652d312341327d1a8119165e6
+      '@graphql-ez/utils': 0.1.4_794d6c9652d312341327d1a8119165e6
       graphql-ez: 0.13.7_794d6c9652d312341327d1a8119165e6
     transitivePeerDependencies:
       - '@types/node'
@@ -908,6 +910,16 @@ packages:
 
   /@graphql-ez/utils/0.1.2_794d6c9652d312341327d1a8119165e6:
     resolution: {integrity: sha512-kxmKVZYkp2zUEIGLblUrFYxWKPMKWZKaa2CG3AReImFyO5RtOYCCAveyCetY7k6FnbyrSDqSgiJRRpEmdujsGw==}
+    peerDependencies:
+      '@types/node': '*'
+      graphql: '*'
+    dependencies:
+      '@types/node': 17.0.6
+      graphql: 16.2.0
+    dev: false
+
+  /@graphql-ez/utils/0.1.4_794d6c9652d312341327d1a8119165e6:
+    resolution: {integrity: sha512-k2ELk9EIGeotxx1gmGRGKKqtPgHaTN/o9T3M2vGTAmhySRxSwDidHVotDGgEDCUoEFGVeqb0doXn215A/x8rlA==}
     peerDependencies:
       '@types/node': '*'
       graphql: '*'
