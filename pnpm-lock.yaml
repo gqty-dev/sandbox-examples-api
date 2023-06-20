@@ -10,7 +10,7 @@ specifiers:
   '@graphql-ez/plugin-websockets': ^0.10.2
   '@prisma/client': ^3.7.0
   '@types/faker': ^5.5.9
-  '@types/jsonwebtoken': ^8.5.6
+  '@types/jsonwebtoken': ^8.5.9
   '@types/lodash': ^4.14.178
   '@types/lodash-es': ^4.17.5
   '@types/ms': ^0.7.31
@@ -57,7 +57,7 @@ dependencies:
 
 devDependencies:
   '@types/faker': 5.5.9
-  '@types/jsonwebtoken': 8.5.6
+  '@types/jsonwebtoken': 8.5.9
   '@types/lodash': 4.14.178
   '@types/lodash-es': 4.17.5
   '@types/ms': 0.7.31
@@ -292,6 +292,8 @@ packages:
     resolution: {integrity: sha512-sR4eaSrnM7BV7QPzGfEX5paG/6wrZM3I0HDzfIAK06ESvo9oy3xBuVBxE3MbQaKNhvg8g/ixjMWo2CGpzpHsDA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.16.7
     dev: false
 
   /@babel/plugin-proposal-class-properties/7.16.7_@babel+core@7.16.7:
@@ -1108,8 +1110,8 @@ packages:
     resolution: {integrity: sha512-uCx6mP3UY5SIO14XlspxsGjgaemrxpssJI0Ol+GfhxtcKpv9pgRZYsS4eeKeHVLje6Qtc8lGszuBI461+gVZBA==}
     dev: true
 
-  /@types/jsonwebtoken/8.5.6:
-    resolution: {integrity: sha512-+P3O/xC7nzVizIi5VbF34YtqSonFsdnbXBnWUCYRiKOi1f9gA4sEFvXkrGr/QVV23IbMYvcoerI7nnhDUiWXRQ==}
+  /@types/jsonwebtoken/8.5.9:
+    resolution: {integrity: sha512-272FMnFGzAVMGtu9tkr29hRL6bZj4Zs1KZNeHLnKqAvp06tAIcarTMwOh8/8bz4FmKRcMxZhZNeUAQsNLoiPhg==}
     dependencies:
       '@types/node': 17.0.6
     dev: true
