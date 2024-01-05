@@ -27,7 +27,7 @@
     "@graphql-ez/plugin-codegen": "^0.7.7",
     "@graphql-ez/plugin-modules": "^0.10.0",
     "@graphql-ez/plugin-scalars": "^0.7.3",
-    "@graphql-ez/plugin-voyager": "^0.9.1",
+    "@graphql-ez/plugin-voyager": "^0.10.1",
     "@graphql-ez/plugin-websockets": "^0.10.2",
     "@prisma/client": "^3.7.0",
     "date-fns": "^2.28.0",
