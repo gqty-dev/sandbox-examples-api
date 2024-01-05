@@ -35,7 +35,7 @@
     "faker": "^5.5.3",
     "fastify": "^3.25.3",
     "graphql": "^16.2.0",
-    "graphql-ez": "^0.13.7",
+    "graphql-ez": "^0.16.1",
     "jsonwebtoken": "^8.5.1",
     "lodash-es": "^4.17.21",
     "ms": "^2.1.3",
