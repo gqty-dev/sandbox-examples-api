@@ -25,7 +25,7 @@
     "@graphql-ez/fastify": "^0.9.5",
     "@graphql-ez/plugin-altair": "^0.9.7",
     "@graphql-ez/plugin-codegen": "^0.7.7",
-    "@graphql-ez/plugin-modules": "^0.10.0",
+    "@graphql-ez/plugin-modules": "^0.12.1",
     "@graphql-ez/plugin-scalars": "^0.7.3",
     "@graphql-ez/plugin-voyager": "^0.9.1",
     "@graphql-ez/plugin-websockets": "^0.10.2",
